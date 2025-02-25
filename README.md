@@ -81,6 +81,8 @@ venv\\Scripts\\activate     # On Windows
 ```
     uvicorn app.main:app
 ```
+- Once the server is running, you can access the interactive API documentation (Swagger UI) at:
+- [Swagger UI](http://127.0.0.1:8000/docs)
 
 5. **to run test cases**
 ```
