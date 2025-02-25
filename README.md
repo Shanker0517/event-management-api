@@ -8,7 +8,12 @@
 
 ### 2. **Attendee Management**
 - Register attendees for events.
-- Bulk check-in via CSV uploads.
+- Bulk Check-In via CSV Upload
+    - To check in attendees in bulk, upload a CSV file containing only the attendee IDs. The  system will process the file and mark the corresponding attendees as checked in.
+        - example in csv file
+            - 12345
+            - 67890
+            - 11223
 
 ### 3. **Background Scheduler**
 - Automatically updates event status to `completed` when the event's end time has passed.
