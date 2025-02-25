@@ -1,0 +1,29 @@
+"" 
+# Byte-compiled / compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+.env
+.venv/
+
+# Logs
+logs/
+*.log
+
+# Database and migrations
+alembic/versions/
+*.sqlite3
+*.db
+
+# Cache and temporary files
+.pytest_cache/
+.mypy_cache/
+.vscode/
+.idea/
+
+# Ignore environment variables and credentials
+.env
+.DS_Store
