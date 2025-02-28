@@ -37,7 +37,7 @@ async def lifespan(app: FastAPI):
     print("Initializing database...")
     Base.metadata.create_all(bind=engine)
     yield  # Allows app to start
-    print("Shutting down application...")  # Cleanup if needed
+    print("Shutting down application...")
 
 # Create FastAPI instance with lifespan
 app = FastAPI(title="Event Management API", lifespan=lifespan)
