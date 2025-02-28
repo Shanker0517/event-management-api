@@ -37,6 +37,7 @@ async def lifespan(app: FastAPI):
     print("Initializing database...")
     Base.metadata.create_all(bind=engine)
     yield  # Allows app to start
+    engine.dispose()
     print("Shutting down application...")
 
 # Create FastAPI instance with lifespan
@@ -89,10 +90,10 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     )
 
 # Shutdown Event to Stop Scheduler
-@app.on_event("shutdown")
-def shutdown_scheduler():
-    print("Shutting down scheduler...")
-    scheduler.shutdown()
+# @app.on_event("shutdown")
+# def shutdown_scheduler():
+#     print("Shutting down scheduler...")
+#     scheduler.shutdown()
 
 # Run the FastAPI app with Uvicorn
 if __name__ == "__main__":
